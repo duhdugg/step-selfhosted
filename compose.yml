@@ -7,4 +7,4 @@ services:
       - "8989:8989"
     volumes:
       # podman+SELinux. remove the :Z + change to absolute path for docker+non-SELinux
-      - ./homes:/opt/step/homes:Z
+      - ./data/homes:/opt/step/homes:Z
