@@ -1,0 +1,10 @@
+services:
+  step-web:
+    image: step-selfhosted:latest
+    container_name: step-selfhosted
+    command: ["run-step.sh"]
+    ports:
+      - "8989:8989"
+    volumes:
+      # podman+SELinux. remove the :Z + change to absolute path for docker+non-SELinux
+      - ./homes:/opt/step/homes:Z

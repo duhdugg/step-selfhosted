@@ -1,0 +1,17 @@
+FROM scratch AS ctx
+COPY ctx /
+
+FROM scratch AS step-build
+COPY step-build /
+
+FROM docker.io/library/debian:trixie
+
+WORKDIR /
+RUN --mount=type=bind,from=ctx,target=/ctx bash /ctx/install.sh;
+RUN --mount=type=bind,from=step-build,target=/step-build bash /step-build/deploy.sh;
+
+USER step
+WORKDIR /home/step
+EXPOSE 8989
+
+CMD ["run-step.sh"]

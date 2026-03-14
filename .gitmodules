@@ -1,0 +1,8 @@
+[submodule "submodules/step"]
+	path = submodules/step
+	url = https://github.com/duhdugg/step.git
+	branch = duhdugg-master
+[submodule "submodules/jsword"]
+	path = submodules/jsword
+	url = https://github.com/duhdugg/jsword.git
+	branch = jsword-stepbible-2026Q1
