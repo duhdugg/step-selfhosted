@@ -12,3 +12,5 @@ cp -r ../../submodules/step/step-web/target/step-web ./
 cd ./step-web
 mv *.js js/
 mv *.css css/
+
+python3 "$SCRIPT_DIR/generate-git-version-info.py" > "git-version-info.json"
