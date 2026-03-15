@@ -28,6 +28,9 @@ download-desktop-version:
 	export DESKTOPVERSION="$(DESKTOPVERSION)"; \
 	bash scripts/download-desktop-version.sh
 
+export-webxml:
+	bash scripts/export-webxml.sh
+
 prepare-oci-context:
 	bash scripts/prepare-oci-context.sh
 

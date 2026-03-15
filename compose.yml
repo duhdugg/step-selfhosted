@@ -6,5 +6,6 @@ services:
     ports:
       - "8989:8989"
     volumes:
-      # podman+SELinux. remove the :Z + change to absolute path for docker+non-SELinux
       - ./data/homes:/opt/step/homes:Z
+      # for custom web.xml files
+      # - ./data/web.xml:/opt/step/step-web/WEB-INF/web.xml
