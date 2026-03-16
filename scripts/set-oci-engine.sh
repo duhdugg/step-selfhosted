@@ -11,6 +11,7 @@ set +e
 
 OCI_ENGINE=podman
 if podman images | grep step-selfhosted; then
+  true
 elif docker images | grep step-selfhosted; then
   OCI_ENGINE="docker"
 else
