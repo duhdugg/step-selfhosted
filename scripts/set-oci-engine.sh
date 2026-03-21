@@ -10,9 +10,9 @@ esac
 set +e
 
 OCI_ENGINE=podman
-if podman images | grep step-selfhosted; then
+if podman images > "/dev/null"; then
   true
-elif docker images | grep step-selfhosted; then
+elif docker images > "/dev/null"; then
   OCI_ENGINE="docker"
 else
   OCI_ENGINE="sudo docker"
