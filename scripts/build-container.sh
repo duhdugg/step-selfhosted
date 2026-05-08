@@ -7,4 +7,5 @@ cd "$SCRIPT_DIR"
 source ./set-oci-engine.sh
 cd "$SCRIPT_DIR/../oci"
 
+# $OCI_ENGINE build --pull=never -t step-selfhosted -f Containerfile .
 $OCI_ENGINE build -t step-selfhosted -f Containerfile .
